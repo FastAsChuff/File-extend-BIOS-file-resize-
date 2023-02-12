@@ -64,7 +64,7 @@ int main(int argc, char*argv[])
   for (i=0; i<imax; i++) {
     blocks = fwrite(output_buffer, 4096, 1, fp);
     if (blocks != 1) {
-      fprintf(stderr, "Error writing to file %s. Operation aborted.\n", argv[2]);
+      fprintf(stderr, "Error writing to file %s. Operation aborted.\n", argv[1]);
       free(output_buffer);
       fclose(fp);
       exit(1);
@@ -73,7 +73,7 @@ int main(int argc, char*argv[])
   for (j=0; j<jmax; j++) {
     blocks = fwrite(output_buffer, 1, 1, fp);
     if (blocks != 1) {
-      fprintf(stderr, "Error writing to file %s. Operation aborted.\n", argv[2]);
+      fprintf(stderr, "Error writing to file %s. Operation aborted.\n", argv[1]);
       free(output_buffer);
       fclose(fp);
       exit(1);
